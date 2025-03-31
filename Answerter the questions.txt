@@ -39,9 +39,20 @@ WHERE id = 5;
 
 8.What is the significance of the JOIN operation, and how does it work in PostgreSQL?
 
+ans: 
+দুই বা তত দিক টেবিলের মধ্যে বিভিন্ন কুয়েরি এবং অপারেশন চালানোর জন্য জয়েন ব্যবহার করা হয় জয়েন এর মাধ্যমে দুই ততো টিক টেবিলের সমন্বয়ে কুয়েরি করা সম্ভব;
+
+
 
 9.Explain the GROUP BY clause and its role in aggregation operations.
  Group By: Group By কাজ হল একটি টেবিলের নির্দিষ্ট কলামের উপর ভিত্তি করে একই ধরনের মানগুলোকে একত্রিত করা এর ফলে এর উপর কিছু নির্দিষ্ট  aggregation ফাংশন প্রয়োগ করা সম্ভব হয় | aggregation ফাংশন ব্যবহার করে sum ,count, AVG ,max,min এ ধরনের কাজ অনায়াসে করা যায়
+
+ SELECT column_name FROM table_name
+ JOIN table_name  Using(common column)
+
+
+ exam : SELECT employees.name, departments.department_name FROM employees
+ JOIN departments  Using(department_id)
 
 10.How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
  
